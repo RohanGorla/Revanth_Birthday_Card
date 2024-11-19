@@ -1,27 +1,31 @@
 import { useState, useEffect } from "react";
-import audiobgm from "../src/assets/Revara_BGM.mp3";
+import audiobgm from "../src/assets/Revara_BGM_3.0.mp3";
 import "./App.css";
 
 function App() {
   const [showCardCover, setShowCardCover] = useState(true);
   const [showOpenPresentButton, setShowOpenPresentButton] = useState(true);
   const [specialCharacter, setSpecialCharacter] = useState(-1);
+  const [showMainTint, setShowMainTint] = useState(true);
   const [name, setName] = useState("REVARA");
   const bgm = new Audio();
 
   function startMainAnimation() {
-    setInterval(() => {
-      let index = -1;
-      const characterInterval = setInterval(() => {
-        if (index + 1 !== name.length) {
-          index += 1;
-          setSpecialCharacter(index);
-        } else {
-          setSpecialCharacter(-1);
-          clearInterval(characterInterval);
-        }
-      }, 150);
-    }, name.length * 150 + 2000);
+    setTimeout(() => {
+      setShowMainTint(false);
+      setInterval(() => {
+        let index = -1;
+        const characterInterval = setInterval(() => {
+          if (index + 1 !== name.length) {
+            index += 1;
+            setSpecialCharacter(index);
+          } else {
+            setSpecialCharacter(-1);
+            clearInterval(characterInterval);
+          }
+        }, 150);
+      }, name.length * 150 + 2000);
+    }, 5000);
   }
 
   return (
@@ -78,10 +82,16 @@ function App() {
             }, 2300);
           }}
         >
-          Open Present!
+          Open Your Present!
         </button>
       </div>
       <div className="Card_Main">
+        <div
+          className={showMainTint ? "Card_Message" : "Card_Message--Inactive"}
+        >
+          <p>7th October</p>
+          <p>A Legend Was Born</p>
+        </div>
         <div className="Card_Name">
           {Array.from(name).map((character, index) => {
             return (
