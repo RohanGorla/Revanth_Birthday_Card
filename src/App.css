@@ -1,0 +1,113 @@
+:root {
+  --Open_Card_Button: 16px;
+  --Card_Main_Font: "Fredoka", serif;
+}
+
+.Card_Container {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.Card_Cover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.Card_Cover--Quadrant_TL {
+  position: absolute;
+  width: 50dvw;
+  height: 50dvh;
+  top: 0dvh;
+  left: 0dvw;
+  background-color: rgb(25, 25, 25);
+  transition: all 2s ease-in-out .3s;
+}
+
+.Card_Cover--Quadrant_TR {
+  position: absolute;
+  width: 50dvw;
+  height: 50dvh;
+  top: 0dvh;
+  left: 50dvw;
+  background-color: rgb(25, 25, 25);
+  transition: all 2s ease-in-out .3s;
+}
+
+.Card_Cover--Quadrant_BL {
+  position: absolute;
+  width: 50dvw;
+  height: 50dvh;
+  top: 50dvh;
+  left: 0dvw;
+  background-color: rgb(25, 25, 25);
+  transition: all 2s ease-in-out .3s;
+}
+
+.Card_Cover--Quadrant_BR {
+  position: absolute;
+  width: 50dvw;
+  height: 50dvh;
+  top: 50dvh;
+  left: 50dvw;
+  background-color: rgb(25, 25, 25);
+  transition: all 2s ease-in-out .3s;
+}
+
+.Card_Cover--Quadrant_TL--Open {
+  top: -50dvh;
+  left: -50dvw;
+}
+
+.Card_Cover--Quadrant_TR--Open {
+  top: -50dvh;
+  left: 100dvw;
+}
+
+.Card_Cover--Quadrant_BL--Open {
+  top: 100dvh;
+  left: -50dvw;
+}
+
+.Card_Cover--Quadrant_BR--Open {
+  top: 100dvh;
+  left: 100dvw;
+}
+
+.Card_Cover--Open_Button {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card_Cover--Open_Button button {
+  font-family: var(--Card_Main_Font);
+  font-size: var(--Open_Card_Button);
+  letter-spacing: .4px;
+  background-color: black;
+  color: white;
+  padding: .6em 1.4em;
+  border-style: none;
+  border-radius: 8px;
+  border: 2px solid white;
+  box-shadow: 2px 2px white;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.Card_Cover--Open_Button--Toggle button {
+  scale: 0;
+}
+
+.Card_Cover--Open_Button--Inactive {
+  display: none;
+}
