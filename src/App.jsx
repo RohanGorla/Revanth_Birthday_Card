@@ -7,10 +7,22 @@ function App() {
   const [showOpenPresentButton, setShowOpenPresentButton] = useState(true);
   const [specialCharacter, setSpecialCharacter] = useState(-1);
   const [showMainTint, setShowMainTint] = useState(true);
+  const [showMessageOne, setShowMessageOne] = useState(false);
+  const [showMessageTwo, setShowMessageTwo] = useState(false);
+  const [showMessageThree, setShowMessageThree] = useState(false);
   const [name, setName] = useState("REVARA");
   const bgm = new Audio();
 
   function startMainAnimation() {
+    setTimeout(() => {
+      setShowMessageOne(true);
+      setTimeout(() => {
+        setShowMessageTwo(true);
+        setTimeout(() => {
+          setShowMessageThree(true);
+        }, 1300);
+      }, 1300);
+    }, 1000);
     setTimeout(() => {
       setShowMainTint(false);
       setInterval(() => {
@@ -89,8 +101,27 @@ function App() {
         <div
           className={showMainTint ? "Card_Message" : "Card_Message--Inactive"}
         >
-          <p>7th October</p>
-          <p>A Legend Was Born</p>
+          <p
+            className={
+              showMessageOne ? "Card_Message--Show" : "Card_Message--Hide"
+            }
+          >
+            October 7th
+          </p>
+          <p
+            className={
+              showMessageTwo ? "Card_Message--Show" : "Card_Message--Hide"
+            }
+          >
+            The Sea Turned Red
+          </p>
+          <p
+            className={
+              showMessageThree ? "Card_Message--Show" : "Card_Message--Hide"
+            }
+          >
+            For The Legend
+          </p>
         </div>
         <div className="Card_Name">
           {Array.from(name).map((character, index) => {

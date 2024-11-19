@@ -142,6 +142,15 @@
   display: none;
 }
 
+.Card_Message--Show {
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+
+.Card_Message--Hide {
+  opacity: 0;
+}
+
 .Card_Name {
   position: absolute;
   z-index: 2;
