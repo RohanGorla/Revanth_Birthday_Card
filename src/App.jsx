@@ -50,8 +50,8 @@ function App() {
       >
         <button
           onClick={() => {
-            // bgm.src = audiobgm;
-            // bgm.play();
+            bgm.src = audiobgm;
+            bgm.play();
             setShowCardCover(false);
             setTimeout(() => {
               setShowOpenPresentButton(false);
@@ -60,6 +60,9 @@ function App() {
         >
           Open Present!
         </button>
+      </div>
+      <div className="Card_Main">
+
       </div>
     </div>
   );
