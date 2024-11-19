@@ -1,16 +1,20 @@
 :root {
   --Open_Card_Button: 16px;
   --Card_Main_Font: "Fredoka", serif;
+  --Card_Second_Font: "Monomaniac One", sans-serif;
+  --Card_Name: 500px;
 }
 
 .Card_Container {
   position: relative;
   height: 100dvh;
   width: 100dvw;
+  overflow: hidden;
 }
 
 .Card_Cover {
   position: absolute;
+  z-index: 9;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -24,7 +28,7 @@
   top: 0dvh;
   left: 0dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .3s;
+  transition: all 2s ease-in-out .5s;
 }
 
 .Card_Cover--Quadrant_TR {
@@ -34,7 +38,7 @@
   top: 0dvh;
   left: 50dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .3s;
+  transition: all 2s ease-in-out .5s;
 }
 
 .Card_Cover--Quadrant_BL {
@@ -44,7 +48,7 @@
   top: 50dvh;
   left: 0dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .3s;
+  transition: all 2s ease-in-out .5s;
 }
 
 .Card_Cover--Quadrant_BR {
@@ -54,7 +58,7 @@
   top: 50dvh;
   left: 50dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .3s;
+  transition: all 2s ease-in-out .5s;
 }
 
 .Card_Cover--Quadrant_TL--Open {
@@ -79,7 +83,7 @@
 
 .Card_Cover--Open_Button {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -110,4 +114,33 @@
 
 .Card_Cover--Open_Button--Inactive {
   display: none;
+}
+
+.Card_Main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100dvw;
+  height: 100dvh;
+} 
+
+.Card_Name {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card_Name--Character {
+  font-family: var(--Card_Second_Font);
+  font-size: var(--Card_Name);
+}
+
+.Card_Name--SpecialCharacter {
+  color: red;
+  scale: 1.05;
 }
