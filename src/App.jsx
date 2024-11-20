@@ -14,15 +14,13 @@ function App() {
   const bgm = new Audio();
 
   function startMainAnimation() {
+    setShowMessageOne(true);
     setTimeout(() => {
-      setShowMessageOne(true);
+      setShowMessageTwo(true);
       setTimeout(() => {
-        setShowMessageTwo(true);
-        setTimeout(() => {
-          setShowMessageThree(true);
-        }, 1300);
-      }, 1300);
-    }, 1000);
+        setShowMessageThree(true);
+      }, 1700);
+    }, 1700);
     setTimeout(() => {
       setShowMainTint(false);
       setInterval(() => {
@@ -106,11 +104,13 @@ function App() {
               showMessageOne ? "Card_Message--Show" : "Card_Message--Hide"
             }
           >
-            October 7th
+            October 7th, 1995
           </p>
           <p
             className={
-              showMessageTwo ? "Card_Message--Show" : "Card_Message--Hide"
+              showMessageTwo
+                ? "Card_Message--Show Card_Message--Two"
+                : "Card_Message--Hide Card_Message--Two"
             }
           >
             The Sea Turned Red
@@ -120,7 +120,7 @@ function App() {
               showMessageThree ? "Card_Message--Show" : "Card_Message--Hide"
             }
           >
-            For The Legend
+            For The Man...
           </p>
         </div>
         <div className="Card_Name">

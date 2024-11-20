@@ -1,8 +1,9 @@
 :root {
-  --Open_Card_Button: 16px;
   --Card_Main_Font: "Fredoka", serif;
   --Card_Second_Font: "Monomaniac One", sans-serif;
   --Card_Name: 500px;
+  --Card_Message: 26px;
+  --Open_Card_Button: 16px;
 }
 
 .Card_Container {
@@ -143,12 +144,22 @@
 }
 
 .Card_Message--Show {
+  font-family: var(--Card_Second_Font);
+  font-size: var(--Card_Message);
+  margin: .3em 0em;
   opacity: 1;
   transition: all .5s ease-in-out;
 }
 
 .Card_Message--Hide {
+  font-family: var(--Card_Second_Font);
+  font-size: var(--Card_Message);
+  margin: .3em 0em;
   opacity: 0;
+}
+
+.Card_Message--Two {
+  color: red;
 }
 
 .Card_Name {
@@ -170,5 +181,5 @@
 
 .Card_Name--SpecialCharacter {
   color: red;
-  scale: 1.05;
+  scale: 1.1;
 }
