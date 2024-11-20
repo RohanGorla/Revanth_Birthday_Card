@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
 import audiobgm from "../src/assets/Revara_BGM_3.0.mp3";
+import shades from "../src/assets/Shades_NoBG.png";
+import jacket from "../src/assets/Jacket_NoBG.png";
 import "./App.css";
 
 function App() {
   const [showCardCover, setShowCardCover] = useState(true);
   const [showOpenPresentButton, setShowOpenPresentButton] = useState(true);
   const [specialCharacter, setSpecialCharacter] = useState(-1);
-  const [showMainTint, setShowMainTint] = useState(true);
+  const [showMessageBox, setShowMessageBox] = useState(true);
   const [showMessageOne, setShowMessageOne] = useState(false);
   const [showMessageTwo, setShowMessageTwo] = useState(false);
   const [showMessageThree, setShowMessageThree] = useState(false);
+  const [showImageOne, setShowImageOne] = useState(false);
+  const [showImageTwo, setShowImageTwo] = useState(false);
   const [name, setName] = useState("REVARA");
   const bgm = new Audio();
 
@@ -22,8 +26,9 @@ function App() {
       }, 1700);
     }, 1700);
     setTimeout(() => {
-      setShowMainTint(false);
+      setShowMessageBox(false);
       setInterval(() => {
+        setShowImageOne(true);
         let index = -1;
         const characterInterval = setInterval(() => {
           if (index + 1 !== name.length) {
@@ -97,7 +102,7 @@ function App() {
       </div>
       <div className="Card_Main">
         <div
-          className={showMainTint ? "Card_Message" : "Card_Message--Inactive"}
+          className={showMessageBox ? "Card_Message" : "Card_Message--Inactive"}
         >
           <p
             className={
@@ -139,7 +144,17 @@ function App() {
             );
           })}
         </div>
-        <div className="Card_Photos"></div>
+        <div className="Card_Photos">
+          <div
+            className={
+              showImageOne
+                ? "Card_Photos--Image Card_Photos--Image--One"
+                : "Card_Photos--Image--Inactive"
+            }
+          >
+            <img src={shades}></img>
+          </div>
+        </div>
       </div>
     </div>
   );
