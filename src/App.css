@@ -214,7 +214,7 @@
   position: absolute;
   left: 100dvw;
   animation-name: imageOne;
-  animation-duration: 10s;
+  animation-duration: 38s;
   animation-timing-function: ease-in-out;
   animation-delay: 2s;
 }
@@ -223,10 +223,42 @@
   0% {
     left: -650px;
   }
-  5%, 95% {
+  1.5%, 98.5% {
     left: calc(50dvw - 325px);
+  }
+  4.6%, 5% {
+    scale: 1.1;
+  }
+  4.4%, 4.8%, 5.2% {
+    scale: 1;
   }
   100% {
     left: 100dvw;
   }
+}
+
+.Card_InfoCards {
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.Card_InfoCard {
+  position: absolute;
+  left: 100dvw;
+  width: fit-content;
+}
+
+.Card_InfoCard span {
+  font-family: var(--Card_Second_Font);
+  font-size: var(--Card_Message);
+  display: block;
+  margin: 1em 0em;
+}
+
+.Card_InfoCard--Inactive {
+  display: none;
 }
