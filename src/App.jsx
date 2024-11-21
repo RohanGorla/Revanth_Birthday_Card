@@ -14,6 +14,9 @@ function App() {
   const [showMessageThree, setShowMessageThree] = useState(false);
   const [showImageOne, setShowImageOne] = useState(false);
   const [showImageTwo, setShowImageTwo] = useState(false);
+  const [showInfoCardOne, setShowInfoCardOne] = useState(false);
+  const [showInfoCardTwo, setShowInfoCardTwo] = useState(false);
+  const [showInfoCardThree, setShowInfoCardThree] = useState(false);
   const [name, setName] = useState("REVARA");
   const bgm = new Audio();
 
@@ -29,6 +32,12 @@ function App() {
       setShowMessageBox(false);
       setInterval(() => {
         setShowImageOne(true);
+        setShowInfoCardOne(true);
+        setShowInfoCardTwo(true);
+        setShowInfoCardThree(true);
+        setTimeout(() => {
+          setShowInfoCardOne(true);
+        }, 12000);
         let index = -1;
         const characterInterval = setInterval(() => {
           if (index + 1 !== name.length) {
@@ -153,6 +162,35 @@ function App() {
             }
           >
             <img src={shades}></img>
+          </div>
+        </div>
+        <div className="Card_InfoCards">
+          <div
+            className={
+              showInfoCardOne
+                ? "Card_InfoCard Card_InfoCard--One"
+                : "Card_InfoCard--Inactive"
+            }
+          >
+            <span>LIC OFFICER</span>
+          </div>
+          <div
+            className={
+              showInfoCardTwo
+                ? "Card_InfoCard Card_InfoCard--Two"
+                : "Card_InfoCard--Inactive"
+            }
+          >
+            <span>PALASA GANGSTER</span>
+          </div>
+          <div
+            className={
+              showInfoCardThree
+                ? "Card_InfoCard Card_InfoCard--Three"
+                : "Card_InfoCard--Inactive"
+            }
+          >
+            <span>GOVERNMENT OF THE EMPLOYEE</span>
           </div>
         </div>
       </div>
