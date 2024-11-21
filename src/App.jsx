@@ -156,7 +156,7 @@ function App() {
               showMessageThree ? "Card_Message--Show" : "Card_Message--Hide"
             }
           >
-            For The Man...
+            All Hail
           </p>
         </div>
         <div className="Card_Name">

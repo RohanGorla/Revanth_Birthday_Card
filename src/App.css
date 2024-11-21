@@ -1,6 +1,6 @@
 :root {
-  --Card_Main_Font: "Fredoka", serif;
-  --Card_Second_Font: "Monomaniac One", sans-serif;
+  --Card_Main_Font: "Monomaniac One", sans-serif;
+  --Card_Second_Font: "Varela Round", sans-serif;
   --Card_Name: 500px;
   --Card_Message: 26px;
   --Card_Wish: 200px;
@@ -96,7 +96,7 @@
 }
 
 .Card_Cover--Open_Button button {
-  font-family: var(--Card_Main_Font);
+  font-family: var(--Card_Second_Font);
   font-size: var(--Open_Card_Button);
   letter-spacing: .4px;
   background-color: black;
@@ -147,6 +147,7 @@
 .Card_Message--Show {
   font-family: var(--Card_Second_Font);
   font-size: var(--Card_Message);
+  letter-spacing: 3px;
   margin: .3em 0em;
   opacity: 1;
   transition: all .5s ease-in-out;
@@ -155,6 +156,7 @@
 .Card_Message--Hide {
   font-family: var(--Card_Second_Font);
   font-size: var(--Card_Message);
+  letter-spacing: 3px;
   margin: .3em 0em;
   opacity: 0;
 }
@@ -177,7 +179,7 @@
 }
 
 .Card_Name--Character {
-  font-family: var(--Card_Second_Font);
+  font-family: var(--Card_Main_Font);
   font-size: var(--Card_Name);
   color: red;
 }
@@ -214,6 +216,7 @@
 .Card_Photos--Image--One {
   position: absolute;
   left: 100dvw;
+  opacity: 0;
   animation-name: imageOne;
   animation-duration: 38s;
   animation-timing-function: ease-in-out;
@@ -223,12 +226,19 @@
 @keyframes imageOne {
   0% {
     left: -650px;
+    opacity: 1;
   }
-  1.5%, 98.5% {
+  1.5%, 97.5% {
     left: calc(50dvw - 325px);
+    opacity: 1;
+  }
+  99.5% {
+    left: calc(50dvw - 325px);
+    opacity: 0;
   }
   100% {
     left: 100dvw;
+    opacity: 0;
   }
 }
 
@@ -250,6 +260,7 @@
 .Card_InfoCard span {
   font-family: var(--Card_Second_Font);
   font-size: var(--Card_Message);
+  letter-spacing: 3px;
   display: block;
   margin: 1em 0em;
 }
@@ -339,7 +350,7 @@
 }
 
 .Card_Wish p {
-  font-family: var(--Card_Main_Font);
+  font-family: var(--Card_Second_Font);
   font-size: var(--Card_Wish);
 }
 
