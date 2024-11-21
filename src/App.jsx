@@ -43,6 +43,9 @@ function App() {
         setShowCardCover(true);
         setTimeout(() => {
           setShowMessageBox(true);
+          setShowMessageOne(false);
+          setShowMessageTwo(false);
+          setShowMessageThree(false);
           setShowInfoCardOne(false);
           setShowInfoCardTwo(false);
           setShowInfoCardThree(false);
@@ -51,12 +54,13 @@ function App() {
           setShowInfoCardSix(false);
           setShowCardWish(false);
           setShowImageOne(false);
+          clearInterval(mainInterval);
           setTimeout(() => {
             setShowOpenPresentButton(true);
           }, 2000);
         }, 2000);
       }, 44000);
-      setInterval(() => {
+      const mainInterval = setInterval(() => {
         setShowImageOne(true);
         let index = -1;
         const characterInterval = setInterval(() => {
