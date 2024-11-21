@@ -17,6 +17,10 @@ function App() {
   const [showInfoCardOne, setShowInfoCardOne] = useState(false);
   const [showInfoCardTwo, setShowInfoCardTwo] = useState(false);
   const [showInfoCardThree, setShowInfoCardThree] = useState(false);
+  const [showInfoCardFour, setShowInfoCardFour] = useState(false);
+  const [showInfoCardFive, setShowInfoCardFive] = useState(false);
+  const [showInfoCardSix, setShowInfoCardSix] = useState(false);
+  const [showCardWish, setShowCardWish] = useState(false);
   const [name, setName] = useState("REVARA");
   const bgm = new Audio();
 
@@ -33,6 +37,13 @@ function App() {
       setShowInfoCardOne(true);
       setShowInfoCardTwo(true);
       setShowInfoCardThree(true);
+      setShowInfoCardFour(true);
+      setShowInfoCardFive(true);
+      setShowInfoCardSix(true);
+      setShowCardWish(true);
+      setTimeout(() => {
+        setShowCardCover(true);
+      }, 44000);
       setInterval(() => {
         setShowImageOne(true);
         setTimeout(() => {
@@ -192,6 +203,36 @@ function App() {
           >
             <span>GOVERNMENT OF THE EMPLOYEE</span>
           </div>
+          <div
+            className={
+              showInfoCardFour
+                ? "Card_InfoCard Card_InfoCard--Four"
+                : "Card_InfoCard--Inactive"
+            }
+          >
+            <span>OVER 81K VIEWS</span>
+          </div>
+          <div
+            className={
+              showInfoCardFive
+                ? "Card_InfoCard Card_InfoCard--Five"
+                : "Card_InfoCard--Inactive"
+            }
+          >
+            <span>RISING YOUTUBER</span>
+          </div>
+          <div
+            className={
+              showInfoCardSix
+                ? "Card_InfoCard Card_InfoCard--Six"
+                : "Card_InfoCard--Inactive"
+            }
+          >
+            <span>180 SUBSCRIBERS</span>
+          </div>
+        </div>
+        <div className={showCardWish ? "Card_Wish" : "Card_Wish--Inactive"}>
+          <p>HAPPY B'DAY</p>
         </div>
       </div>
     </div>
