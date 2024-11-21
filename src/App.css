@@ -30,7 +30,7 @@
   top: 0dvh;
   left: 0dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .5s;
+  transition: all 2s ease-in-out;
 }
 
 .Card_Cover--Quadrant_TR {
@@ -40,7 +40,7 @@
   top: 0dvh;
   left: 50dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .5s;
+  transition: all 2s ease-in-out;
 }
 
 .Card_Cover--Quadrant_BL {
@@ -50,7 +50,7 @@
   top: 50dvh;
   left: 0dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .5s;
+  transition: all 2s ease-in-out;
 }
 
 .Card_Cover--Quadrant_BR {
@@ -60,7 +60,7 @@
   top: 50dvh;
   left: 50dvw;
   background-color: rgb(25, 25, 25);
-  transition: all 2s ease-in-out .5s;
+  transition: all 2s ease-in-out;
 }
 
 .Card_Cover--Quadrant_TL--Open {
