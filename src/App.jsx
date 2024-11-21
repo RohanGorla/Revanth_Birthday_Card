@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import audiobgm from "../src/assets/Revara_BGM_3.0.mp3";
 import shades from "../src/assets/Shades_NoBG.png";
-import jacket from "../src/assets/Jacket_NoBG.png";
 import "./App.css";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
   const [showMessageTwo, setShowMessageTwo] = useState(false);
   const [showMessageThree, setShowMessageThree] = useState(false);
   const [showImageOne, setShowImageOne] = useState(false);
-  const [showImageTwo, setShowImageTwo] = useState(false);
   const [showInfoCardOne, setShowInfoCardOne] = useState(false);
   const [showInfoCardTwo, setShowInfoCardTwo] = useState(false);
   const [showInfoCardThree, setShowInfoCardThree] = useState(false);
