@@ -43,12 +43,23 @@ function App() {
       setShowCardWish(true);
       setTimeout(() => {
         setShowCardCover(true);
+        setTimeout(() => {
+          setShowMessageBox(true);
+          setShowInfoCardOne(false);
+          setShowInfoCardTwo(false);
+          setShowInfoCardThree(false);
+          setShowInfoCardFour(false);
+          setShowInfoCardFive(false);
+          setShowInfoCardSix(false);
+          setShowCardWish(false);
+          setShowImageOne(false);
+          setTimeout(() => {
+            setShowOpenPresentButton(true);
+          }, 2000);
+        }, 2000);
       }, 44000);
       setInterval(() => {
         setShowImageOne(true);
-        setTimeout(() => {
-          setShowInfoCardOne(true);
-        }, 12000);
         let index = -1;
         const characterInterval = setInterval(() => {
           if (index + 1 !== name.length) {
@@ -97,24 +108,24 @@ function App() {
       </div>
       <div
         className={
-          showCardCover
+          showOpenPresentButton
             ? "Card_Cover--Open_Button"
-            : showOpenPresentButton
-            ? "Card_Cover--Open_Button Card_Cover--Open_Button--Toggle"
-            : "Card_Cover--Open_Button--Inactive"
+            : "Card_Cover--Open_Button Card_Cover--Open_Button--Toggle"
         }
       >
         <button
           onClick={() => {
             bgm.src = audiobgm;
             bgm.play();
-            setShowCardCover(false);
+            setShowOpenPresentButton(false);
             setTimeout(() => {
-              setShowOpenPresentButton(false);
+              setShowCardCover(false);
               setTimeout(() => {
-                startMainAnimation();
-              }, 1000);
-            }, 2300);
+                setTimeout(() => {
+                  startMainAnimation();
+                }, 1000);
+              }, 2300);
+            }, 500);
           }}
         >
           Open Your Present!
