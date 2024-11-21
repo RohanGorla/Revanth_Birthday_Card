@@ -30,11 +30,11 @@ function App() {
     }, 1700);
     setTimeout(() => {
       setShowMessageBox(false);
+      setShowInfoCardOne(true);
+      setShowInfoCardTwo(true);
+      setShowInfoCardThree(true);
       setInterval(() => {
         setShowImageOne(true);
-        setShowInfoCardOne(true);
-        setShowInfoCardTwo(true);
-        setShowInfoCardThree(true);
         setTimeout(() => {
           setShowInfoCardOne(true);
         }, 12000);

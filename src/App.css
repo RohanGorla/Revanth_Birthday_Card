@@ -226,12 +226,6 @@
   1.5%, 98.5% {
     left: calc(50dvw - 325px);
   }
-  4.6%, 5% {
-    scale: 1.1;
-  }
-  4.4%, 4.8%, 5.2% {
-    scale: 1;
-  }
   100% {
     left: 100dvw;
   }
@@ -257,6 +251,58 @@
   font-size: var(--Card_Message);
   display: block;
   margin: 1em 0em;
+}
+
+.Card_InfoCard--One {
+  animation: infoCardOne 6s ease-in-out 9s;
+  top: 2dvh;
+}
+
+.Card_InfoCard--Two {
+  animation: infoCardTwo 8s ease-in-out 7s;
+  top: 8dvh;
+}
+
+.Card_InfoCard--Three {
+  animation: infoCardThree 4s ease-in-out 11s;
+  top: 14dvh;
+}
+
+@keyframes infoCardOne {
+  0% {
+    left: -50dvw;
+  }
+  8.3%, 83.4% {
+    left: 40dvw;
+  }
+  85%, 100% {
+    left: 100dvw;
+  }
+}
+
+@keyframes infoCardTwo {
+  0% {
+    left: -50dvw;
+  }
+  6.25%, 75% {
+    left: 43dvw;
+  }
+  76.25%, 100% {
+    left: 100dvw;
+  }
+
+}
+
+@keyframes infoCardThree {
+  0% {
+    left: -50dvw;
+  }
+  12.5%, 87.5% {
+    left: 46dvw;
+  }
+  90%, 100% {
+    left: 100dvw;
+  }
 }
 
 .Card_InfoCard--Inactive {
