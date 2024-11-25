@@ -366,3 +366,67 @@
 .Card_Wish--Inactive {
   display: none;
 }
+
+@media (max-width: 1700px) {
+  :root {
+    --Card_Main_Font: "Monomaniac One", sans-serif;
+    --Card_Second_Font: "Varela Round", sans-serif;
+    --Card_Name: 400px;
+    --Card_Message: 26px;
+    --Card_Wish: 200px;
+    --Open_Card_Button: 16px;
+  }
+}
+
+@media (max-width: 1300px) {
+  :root {
+    --Card_Main_Font: "Monomaniac One", sans-serif;
+    --Card_Second_Font: "Varela Round", sans-serif;
+    --Card_Name: 300px;
+    --Card_Message: 26px;
+    --Card_Wish: 200px;
+    --Open_Card_Button: 16px;
+  }
+
+  .Card_Photos--Image {
+    width: 450px;
+  }
+  
+  .Card_Photos--Image img {
+    width: 100%;
+  }
+  
+  .Card_Photos--Image--Inactive {
+    display: none;
+  }
+  
+  .Card_Photos--Image--One {
+    position: absolute;
+    left: 100dvw;
+    opacity: 0;
+    animation-name: imageOne;
+    animation-duration: 38s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+  }
+  
+  @keyframes imageOne {
+    0% {
+      left: -450px;
+      opacity: 1;
+    }
+    1.5%, 97.5% {
+      left: calc(50dvw - 225px);
+      opacity: 1;
+    }
+    99.5% {
+      left: calc(50dvw - 225px);
+      opacity: 0;
+    }
+    100% {
+      left: 100dvw;
+      opacity: 0;
+    }
+  }
+  
+}
