@@ -142,7 +142,7 @@ function App() {
               showMessageOne ? "Card_Message--Show" : "Card_Message--Hide"
             }
           >
-            October 7th, 1995
+            October 11th, 1995
           </p>
           <p
             className={
