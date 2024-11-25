@@ -373,7 +373,7 @@
     --Card_Second_Font: "Varela Round", sans-serif;
     --Card_Name: 400px;
     --Card_Message: 26px;
-    --Card_Wish: 200px;
+    --Card_Wish: 120px;
     --Open_Card_Button: 16px;
   }
 }
@@ -384,7 +384,7 @@
     --Card_Second_Font: "Varela Round", sans-serif;
     --Card_Name: 300px;
     --Card_Message: 26px;
-    --Card_Wish: 200px;
+    --Card_Wish: 100px;
     --Open_Card_Button: 16px;
   }
 
@@ -427,6 +427,10 @@
       left: 100dvw;
       opacity: 0;
     }
+  }
+
+  .Card_Wish {
+    margin-top: 3em;
   }
   
 }
